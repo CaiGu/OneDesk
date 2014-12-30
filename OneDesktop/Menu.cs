@@ -26,12 +26,7 @@ namespace OneDesktop
 
         private void Music_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.FileName = @"C:\Program Files\Windows Media Player\wmplayer.exe";
-            info.Arguments = "";
-            info.WindowStyle = ProcessWindowStyle.Normal;
-            Process pro = Process.Start(info);
-            pro.WaitForExit();  
+            System.Diagnostics.Process.Start("wmplayer.exe"); 
         }
 
         private void Music_btn_Click(object sender, EventArgs e)
